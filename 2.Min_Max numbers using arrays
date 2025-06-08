@@ -1,0 +1,52 @@
+2.	Find Maximum and Minimum in Array
+o	Input: [1, 8, 2, 10, 5]
+o	Output: Max = 10, Min = 1
+
+import java.sql.SQLOutput;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please Enter the size of an array");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("Please enter the elements in the array");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        Min_Max a= new Min_Max();
+        a.min_Max(arr);
+    }
+}
+class Min_Max{
+ void min_Max(int[] arr) {
+    int ans;
+    int min=0;
+    int max=0;
+    for (int i = 0; i <arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+            if(arr[i]>max) {
+                max = arr[i];
+            }
+    }
+     System.out.println(min);
+     System.out.println(max);
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
