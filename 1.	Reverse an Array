@@ -1,0 +1,37 @@
+Easy Level
+1.	Reverse an Array
+o	Input: [1, 2, 3, 4, 5]
+o	Output: [5, 4, 3, 2, 1]
+
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please Enter the size of the array");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("Please enter the elements");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int[] ans1= reverseArray(arr);
+        for(int i:ans1){
+            System.out.println(i);
+        }
+    }
+    static int[] reverseArray (int[] arr) {
+        int[] ans=new int[arr.length];
+        for(int i=0;i<arr.length;i++){
+            ans[i]=arr[arr.length-i-1];
+        }
+        return ans;
+    }
+}
+
+
+
+
+
+
