@@ -1,0 +1,54 @@
+5.	Check if Array is Palindrome
+o	Input: [1, 2, 3, 2, 1]
+o	Output: true
+
+import java.sql.SQLOutput;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please Enter the size of an array");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("Please enter the elements in the array");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        Palindrome a= new Palindrome();
+        a.palindrome(arr);
+    }
+}
+class Palindrome {
+    void palindrome(int[] arr) {
+        int ans = 0;
+        int sum = 0;
+        boolean found =true;
+        for (int i = 0;i < arr.length/2; i++) {
+            if(arr[i] != arr[arr.length-1-i]){
+                found=false;
+                break;
+
+            }
+        }
+        if (found == true) {
+            System.out.println("Palindrome");
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
