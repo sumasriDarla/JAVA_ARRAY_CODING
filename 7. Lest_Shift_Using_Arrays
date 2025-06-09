@@ -1,0 +1,49 @@
+7.	Left Rotate Array by One
+o	Input: [1, 2, 3, 4, 5]
+o	Output: [2, 3, 4, 5, 1]
+
+import java.sql.SQLOutput;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please Enter the size of an array");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("Please enter the elements in the array");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        Left_Shift a= new Left_Shift();
+        a.left_Shift(arr);
+    }
+}
+class Left_Shift {
+    void left_Shift(int[] arr) {
+        int first=arr[0];
+        for (int i = 0;i < arr.length-1; i++) {
+            arr[i]=arr[i+1];
+        }
+        arr[arr.length-1]=first;
+        for(int i=0;i<arr.length;i++){
+            System.out.println(arr[i]);
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
