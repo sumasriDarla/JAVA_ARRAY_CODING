@@ -1,0 +1,61 @@
+6.	Second Largest Element
+o	Input: [12, 35, 1, 10, 34, 1]
+o	Output: 34
+
+import java.sql.SQLOutput;
+
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Please Enter the size of an array");
+        int n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("Please enter the elements in the array");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        Second_Largest a= new Second_Largest();
+        a.second_Largest(arr);
+    }
+}
+class Second_Largest {
+    void second_Largest(int[] arr) {
+        int firstlargest=Integer.MIN_VALUE;
+        int secondlargest=Integer.MIN_VALUE;
+        for (int i = 0;i < arr.length; i++) {
+                if(arr[i]>firstlargest){
+                    secondlargest=firstlargest;
+                    firstlargest=arr[i];
+                } else if (arr[i]>secondlargest && arr[i]!=firstlargest) {
+                    secondlargest=arr[i];
+
+                }
+        }
+        if(secondlargest==Integer.MIN_VALUE){
+            System.out.println("There is no second Largest");
+        }
+        else {
+            System.out.println("The second largest is "+secondlargest);
+        }
+
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
